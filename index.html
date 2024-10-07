@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duplication remover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+<article class="tool-container">
+
+  <header class="text-center">
+    <h1>Remove email duplicates</h1>
+    <p>Easily clean up your email lists by removing duplicate addresses with our email duplication remover tool</p>
+  </header>
+
+  <div class="flex">
+    <textarea id="raw-emails" rows="10" cols="33"></textarea>
+    <textarea id="clean-emails" rows="10" cols="33"></textarea>
+  </div>
+
+  <div id="emails-stats">
+  </div>
+
+  <div class="space-between flex">
+    <div class="ignore-capitals-container">
+      <input type="checkbox" id="ignore-capitals" name="ignore-capitals" checked>
+      <label for="ignore-capitals">Ignore capitals</label>
+    </div>
+
+    <button id="submit-button">Submit</button>
+  </div>
+
+</article>
+
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

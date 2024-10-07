@@ -17,6 +17,7 @@ function removeDuplicatesFromEmails(emails) {
 function removeDuplicatesFromList(items) {
     const uniqueItems = new Set();
     return items.filter(item => {
+        item = item.trim();
         if (item === "" || uniqueItems.has(item)) {
             return false;
         }
@@ -44,8 +45,14 @@ function onCleanEmailsInputClick() {
     cleanEmailsInput.select();
 }
 
+
 const submitButton = document.getElementById('submit-button');
 submitButton.addEventListener('click', onSubmitButtonClick);
 
 const cleanEmailsInput = document.getElementById('clean-emails');
 cleanEmailsInput.addEventListener("click", onCleanEmailsInputClick);
+
+const myForm  = document.getElementById("my-form");
+myForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+})
